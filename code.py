@@ -1,2 +1,2 @@
 user = input()
- print(user)
+print(user)
