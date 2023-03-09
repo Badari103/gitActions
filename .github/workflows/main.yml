@@ -8,10 +8,15 @@ jobs:
     runs-on : ubuntu-latest
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         
       - name: Run Super-Linter
-        uses: github/super-linter@v3
-        env:
-          DEFAULT_BRANCH : main
-          GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x' 
+          
+      - name : Install dependencies
+        run: pip install -r requirments.txt
+        
+      - name : Run tests
+        run: pytest
