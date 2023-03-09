@@ -1,3 +1,2 @@
-
-userName = input().strip() 
-print(userName)
+user_name = input().strip() 
+print(user_name)
