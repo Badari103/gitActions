@@ -1,5 +1,5 @@
 def welcome(userName):
-print("Welcome "+userName,sep=' ') 
+print("Welcome "+userName) 
   
 userName=input().strip() 
 welcome(userName)
